@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      alerts: {
+        Row: {
+          alert_type: string
+          bio_score: number
+          created_at: string
+          id: string
+          is_read: boolean
+          message: string
+          vessel_id: string
+          vessel_name: string
+          vessel_sigla: string
+        }
+        Insert: {
+          alert_type?: string
+          bio_score: number
+          created_at?: string
+          id?: string
+          is_read?: boolean
+          message: string
+          vessel_id: string
+          vessel_name: string
+          vessel_sigla: string
+        }
+        Update: {
+          alert_type?: string
+          bio_score?: number
+          created_at?: string
+          id?: string
+          is_read?: boolean
+          message?: string
+          vessel_id?: string
+          vessel_name?: string
+          vessel_sigla?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
