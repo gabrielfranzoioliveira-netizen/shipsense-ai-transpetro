@@ -3,6 +3,7 @@ import { Ship, Sun, Moon, Menu, X, LayoutDashboard, MessageSquare, User, LogOut,
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useAuth } from '@/contexts/AuthContext';
+import { AlertsPanel } from '@/components/AlertsPanel';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -51,6 +52,8 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-2">
+            <AlertsPanel />
+            
             <Button
               variant="ghost"
               size="icon"
